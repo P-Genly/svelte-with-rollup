@@ -44,7 +44,7 @@ import Button from './svelte-components/dist/Button';
 
 ...
 
-private slenderButton: any;
+private svelteButton: any;
 
 ...
 
