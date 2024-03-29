@@ -27,11 +27,10 @@ To create a exportable compenents with rollup:
 ```bash
 npm run rollup:config
 ```
-import Button from './svelte-components/dist/Button';
 
 ### Use components in other app (VueJs, React, Angular, etc...)
 
-After running “npm run rollup:config”, you will find a compiled .js file in the src/dist folder.
+After running `npm run rollup:config`, you will find a compiled .js file in the src/dist folder.
 
 In your target application, create a folder (like `src/svelte-components/dist` for example), and paste the compiled file you need there.
 
@@ -56,3 +55,17 @@ this.svelteButton = new Button({
           },
       });
 ```
+
+## Create new exportable component
+For create new exportable component, you can just create your components and add it into rollup.config.js. He will recognize him by name :
+
+For example, i create new component named like this : `NewComponent.svelte` into `src/components`folder
+
+```js
+export default [
+    createConfig('Button'), // Existing component
+    createConfig('NewComponent') // Add your new component .svelte
+];
+```
+
+Run `npm run rollup:config` and rollup will build your new exportable component into `/dist` folder.
