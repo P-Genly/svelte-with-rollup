@@ -40,7 +40,7 @@ Import them like this: `import Button from './svelte-components/dist/Button';`
 You can now use your svelte components compiled into your target application like this:
 
 ```ts
-import button from './svelte-components/dist/Button';
+import Button from './svelte-components/dist/Button';
 
 ...
 
@@ -48,9 +48,9 @@ private slenderButton: any;
 
 ...
 
-this.svelteButton = new button({
+this.svelteButton = new Button({
           target: this.elementRef.nativeElement.querySelector('#svelte-button-container'),
-          accessories : {
+          props : {
               title: 'My props from Angular!',
               onClick: () => alert('My highlight from Angular!'),
           },
