@@ -1,0 +1,31 @@
+{
+	"name": "svelte-with-rollup",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"rollup:config": "rollup -c",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"svelte": "^4.2.7",
+		"svelte-check": "^3.6.0",
+		"tslib": "^2.4.1",
+		"typescript": "^5.0.0",
+		"vite": "^5.0.3"
+	},
+	"type": "module",
+	"dependencies": {
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"rollup": "^4.13.2",
+		"rollup-plugin-svelte": "^7.2.0",
+		"rollup-plugin-terser": "^7.0.2"
+	}
+}
