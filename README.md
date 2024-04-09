@@ -69,3 +69,8 @@ To create a exportable compenents with rollup:
 ```bash
 npm run rollup:config
 ```
+
+## Add babel into rollup config to build compatible components with older version of ECMAScript :
+For example : If we have a target project on es6 (ES2015) we need to use babel to transpile the code on older version.
+
+Follow this documentation : https://babeljs.io/setup#installation
