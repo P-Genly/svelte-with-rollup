@@ -4,6 +4,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import babel from "@rollup/plugin-babel";
+import postcss from "rollup-plugin-postcss";
+import postcssImport from "postcss-import";
 
 function createConfig(file) {
     return {
@@ -14,6 +16,11 @@ function createConfig(file) {
         plugins: [
             babel({ babelHelpers: 'bundled' }),
             svelte({ preprocess: vitePreprocess() }),
+            postcss({
+                plugins: [postcssImport()],
+                extract: false,
+                inject: true,
+            }),
             resolve(),
             commonjs(),
             terser(),

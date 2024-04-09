@@ -15,3 +15,7 @@
         { title }
     </button>
 </div>
+
+<style>
+    @import "./css/Button.css";
+</style>
