@@ -40,6 +40,11 @@ export default [
 
 Run `npm run rollup:config` and rollup will build your new exportable component into `/dist` folder.
 
+## Add babel into rollup config to build compatible components with older version of ECMAScript :
+For example : If we have a target project on es6 (ES2015) we need to use babel to transpile the code on older version.
+
+Follow this documentation (select rollup in `Build systems`) : https://babeljs.io/setup#installation
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
