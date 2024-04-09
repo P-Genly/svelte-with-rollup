@@ -45,6 +45,47 @@ For example : If we have a target project on es6 (ES2015) we need to use babel t
 
 Follow this documentation (select rollup in `Build systems`) : https://babeljs.io/setup#installation
 
+## Include CSS into .js file built by rollup :
+In rollup config import : 
+
+```css
+import postcss from "rollup-plugin-postcss";
+import postcss from "rollup-plugin-postcss";
+```
+
+Add in `plugins` property :
+```js
+plugins: [
+            ...
+            postcss({
+                plugins: [postcssImport()],
+                extract: false,
+                inject: true,
+            }),
+            ...
+        ]
+```
+
+Rollup will be import your css file used by the components.
+
+Example of a component that imports css :
+```svelte
+<script lang="ts">
+    ...
+</script>
+
+<div>
+    <button on:click={onClick}>
+        { title }
+    </button>
+</div>
+
+<style>
+    @import "./css/Button.css";
+</style>
+```
+
+After running rollup you can see on .js file that css will be imported.
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
