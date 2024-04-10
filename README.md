@@ -50,7 +50,7 @@ In rollup config import :
 
 ```css
 import postcss from "rollup-plugin-postcss";
-import postcss from "rollup-plugin-postcss";
+import postcssImport from "postcss-import";
 ```
 
 Add in `plugins` property :
